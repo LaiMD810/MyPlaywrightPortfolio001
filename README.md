@@ -123,15 +123,38 @@ GitHub Actions workflow is included for automated test execution.
 
 ---
 
+## ⚠️ Troubleshooting (Windows PowerShell Execution Policy)
+
+If PowerShell blocks Playwright commands with:
+
+```bash
+npx : File C:\Program Files\nodejs\npx.ps1 cannot be loaded because running scripts is disabled on this system.
+```
+
+Run commands using Execution Policy Bypass:
+
+```bash
+powershell -ExecutionPolicy Bypass -Command "npx playwright test tests/MainTest.spec.ts"
+```
+
+For report generation:
+
+```bash
+powershell -ExecutionPolicy Bypass -Command "npx playwright show-report"
+```
+
+> This issue happens because PowerShell script execution is restricted by default on some Windows environments.
+
+---
+
 📌 Future Improvements
-JSON test data parameterization
-Advanced API validation scenarios
-Retry and reporting enhancement
+* JSON test data parameterization
+* Advanced API validation scenarios
+* Retry and reporting enhancement
 
 
 ---
 
 ## 👨‍💻 Author
-Lai Mun Dee
 
 Built as part of Playwright automation practice and portfolio development.
