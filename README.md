@@ -21,13 +21,14 @@ This project demonstrates:
 * Playwright
 * TypeScript
 * Node.js
+* Visual Studio Code
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-MYASSEMENT/
+MYASSESSMENT/
 │── .github/workflows/
 │   └── playwright.yml
 │
@@ -81,14 +82,19 @@ Tested against JSONPlaceholder mock API.
 
 ---
 
-## ▶ Run Project
+
+## ▶ Prerequisites
+
+Clone the repository
 
 Install dependencies:
 
 ```bash
 npm install
+npx install playwright
 ```
 
+## ▶ Run Project
 Run all tests:
 
 ```bash
@@ -105,6 +111,12 @@ Run API tests only:
 
 ```bash
 npx playwright test tests/APITest.spec.ts
+```
+
+Run tests in headed mode (to see browser):
+
+```bash
+npx playwright test --headed
 ```
 
 ---
