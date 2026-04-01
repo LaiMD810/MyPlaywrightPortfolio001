@@ -32,7 +32,7 @@ MYASSESSMENT/
 │── .github/workflows/
 │   └── playwright.yml
 │
-│── PageOfModels/
+│── PageObjectsModel/
 │   ├── CartPage.ts
 │   ├── Checkout_CompletePage.ts
 │   ├── Checkout_InformationPage.ts
