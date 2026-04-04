@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test'
-import { PageManager } from '../PageObjectsModel/pageManager'
+import { PageManager } from '../Pages/pageManager'
 
 
 

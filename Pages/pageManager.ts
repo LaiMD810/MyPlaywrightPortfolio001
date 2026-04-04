@@ -1,10 +1,10 @@
 import {expect, Page} from '@playwright/test'
-import { LoginPage } from './LoginPage'
-import { ProductPage } from './ProductPage'
-import { CartPage } from './CartPage'
-import { CheckoutCompletePage } from './Checkout_CompletePage'
-import { CheckoutInformationPage } from './Checkout_InformationPage'
-import { CheckoutOverviewPage } from './Checkout_OverviewPage'
+import { LoginPage } from './LoginPage/LoginPage'
+import { ProductPage } from './ProductPage/ProductPage'
+import { CartPage } from './CartPage/CartPage'
+import { CheckoutCompletePage } from './Checkout_CompletePage/Checkout_CompletePage'
+import { CheckoutInformationPage } from './Checkout_InformationPage/Checkout_InformationPage'
+import { CheckoutOverviewPage } from './Checkout_OverviewPage/Checkout_OverviewPage'
 
 
 export class PageManager{
