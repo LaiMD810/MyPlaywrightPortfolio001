@@ -32,14 +32,32 @@ MYASSESSMENT/
 │── .github/workflows/
 │   └── playwright.yml
 │
-│── PageObjectsModel/
-│   ├── CartPage.ts
-│   ├── Checkout_CompletePage.ts
-│   ├── Checkout_InformationPage.ts
-│   ├── Checkout_OverviewPage.ts
-│   ├── LoginPage.ts
-│   ├── pageManager.ts
-│   └── ProductPage.ts
+├── Pages/
+│   ├── CartPage/
+│   │   ├── CartPage.ts
+│   │   └── CartPage_Locator.ts
+│   │
+│   ├── Checkout_CompletePage/
+│   │   ├── Checkout_CompletePage.ts
+│   │   └── Checkout_CompletePage_Locator.ts
+│   │
+│   ├── Checkout_InformationPage/
+│   │   ├── Checkout_InformationPage.ts
+│   │   └── Checkout_InformationPage_Locator.ts
+│   │
+│   ├── Checkout_OverViewPage/
+│   │   ├── Checkout_OverViewPage.ts
+│   │   └── Checkout_OverViewPage_Locator.ts
+│   │
+│   ├── LoginPage/
+│   │   ├── LoginPage.ts
+│   │   └── LoginPage_Locator.ts
+│   │
+│   ├── ProductPage/
+│   │   ├── ProductPage.ts
+│   │   └── ProductPage_Locator.ts
+│   │
+│   └── pageManager.ts
 │
 │── tests/
 │   ├── APITest.spec.ts
@@ -49,6 +67,7 @@ MYASSESSMENT/
 │── package.json
 │── package-lock.json
 │── playwright.config.ts
+
 ```
 
 ---
