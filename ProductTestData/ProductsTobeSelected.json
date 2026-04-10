@@ -1,0 +1,12 @@
+{
+  "Products": [
+    {
+      "name": "Test 1",
+      "selected_Products": ["Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt"]
+    },
+    {
+      "name": "Test 2",
+      "selected_Products": ["Sauce Labs Bike Light" ]
+    }
+  ]
+}

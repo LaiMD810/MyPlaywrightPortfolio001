@@ -1,4 +1,4 @@
-import {Page} from '@playwright/test'
+import {expect, Page} from '@playwright/test'
 import { LoginPage_Locator } from './LoginPage_Locator'
 
 

@@ -1,39 +1,36 @@
-import {test,expect} from '@playwright/test'
-import { PageManager } from '../Pages/pageManager'
+//import {test,expect} from '@playwright/test'
+//import { PageManager } from '../Pages/pageManager'
+import testData from '../ProductTestData/ProductsTobeSelected.json'
+import { test, expect } from './Fixtures/fixtures';
 
 
 
-test.beforeEach(async({page})=>{
-     await page.goto('https://www.saucedemo.com/')
+// test.beforeEach(async({page})=>{
+//      await page.goto('https://www.saucedemo.com/')
      
-})
+// })
 
-test.describe("Main  Test", ()=>{
-    test('Product Selection - E2E Flow',async ({page})=>{
+for (const product of testData.Products){
+    test.describe("Main  Test", ()=>{
+        test(`Product Selection - E2E Flow ${product.name}`,async ({pm})=>{
+
+        //Product  page
+        await pm.onProduct().selectProduct(product.selected_Products)
+
+        //Cart Page  
+        await pm.onCart().verifyCartItem(product.selected_Products)
+
+        //Checkout Your Information Page
+        await pm.onCheckoutInformation().enterYourInformation("first","Last","10001")
+
+        //Check Overview page
+        await pm.onCheckoutOverview().verifyCheckoutOverviewPage(product.selected_Products)
     
-    const pm = new PageManager(page)
+        //Check Complete Page
+        await pm.onCheckoutComplete().verifyCompletedMesssage()
 
-    //Variable contain the products to be selected
-    const products = ["Sauce Labs Bolt T-Shirt","Sauce Labs Bike Light"]
-
-    //Login page
-    await pm.onLogin().testLogin("standard_user","secret_sauce")
-
-    //Product  page
-    await pm.onProduct().selectProduct(products)
-    
-
-    //Cart Page  
-    await pm.onCart().verifyCartItem(products)
-
-    //Checkout Your Information Page
-    await pm.onCheckoutInformation().enterYourInformation("first","Last","10001")
-
-    //Check Overview page
-    await pm.onCheckoutOverview().verifyCheckoutOverviewPage(products)
-    
-    //Check Complete Page
-    await pm.onCheckoutComplete().verifyCompletedMesssage()
-
+        })
     })
-})
+
+}
+
